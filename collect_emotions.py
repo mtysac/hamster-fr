@@ -31,7 +31,7 @@ for subset in [TRAIN_DIR, TEST_DIR]:
 cap = cv2.VideoCapture(0)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-print('Webcam ready! Press:')
+print('✅ Webcam ready! Press:')
 for k, v in EMOTIONS.items():
     print(f" '{k}' -> {v}")
 print('Press q to quit.\n')
@@ -63,7 +63,7 @@ while True:
     key = cv2.waitKey(1) & 0xFF
 
     if key == ord('q'):
-        print("Exiting...")
+        print("👋 Exiting...")
         break
     for k, emotion  in EMOTIONS.items():
         if key == ord(k):
@@ -96,6 +96,6 @@ while True:
                 if cv2.waitKey(int(1000 / FPS_TARGET)) & 0xFF == ord('q'):
                     break
 
-            print(f'Done capturing for {emotion} ({counts[emotion]}/100\n)')
+            print(f'✅ Done capturing for {emotion} ({counts[emotion]}/100\n)')
 cap.release()
 cv2.destroyAllWindows
