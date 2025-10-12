@@ -32,7 +32,7 @@ for emotion in EMOTIONS:
 
 # === CAMERA HANDLER ===
 def open_camera(index=0):
-    print("🎥 Attempting to open camera...")
+    print("🎥 Attempting to open camera (make sure camera is not in use)...")
     cap = cv2.VideoCapture(index, cv2.CAP_MSMF)
     time.sleep(1)
     if not cap.isOpened():
