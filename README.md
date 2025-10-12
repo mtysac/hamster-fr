@@ -25,3 +25,5 @@ if this is not working properly: (in train_emotion_model.py)
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
+
+resize_overlays.py is to resize pngs in overlays file to 128x128
